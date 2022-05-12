@@ -22,7 +22,7 @@ impl Pcr {
         let last_number = self.get_last_number();
 
         let now_time = Utc::now();
-        let begin_time = Utc.ymd(2022, 4, 3).and_hms(16, 0, 0);
+        let begin_time = Utc.ymd(2022, 4, 4).and_hms(16, 0, 0);
         let timestamp = now_time.timestamp() - begin_time.timestamp();
 
         let pcr_number = ((timestamp / DAY_SECONDS) % CYCLE) + 1;
