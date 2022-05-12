@@ -5,7 +5,7 @@ name: Clock in
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 10 * * *"
+    - cron: "35 3 * * *"
   push:
     branches:
       - main
@@ -39,7 +39,7 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           LOCATION: ${{ secrets.LOCATION }}
           SENDKEY: ${{ secrets.SENDKEY }}
-          PCR_TIME: 2022-04-04
+          PCR_TIME: 2022-05-09
           ALWAYS_TODAY: false
           DISABLE_CLOCK_IN: false
         run: target/release/nju-clock-in
